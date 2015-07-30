@@ -15,7 +15,6 @@ describe('ng-outside-click', function () {
 
   beforeEach(module('ngOutsideClick'));
 
-
   describe('when child element is clicked', function() {
     it('should do nothing', inject(function($rootScope, $compile) {
       var clicked = _appendToDocument($compile, $rootScope.$new());
@@ -31,7 +30,5 @@ describe('ng-outside-click', function () {
       expect(clicked).toHaveBeenCalled();
     }));
   });
-
-
 
 });
