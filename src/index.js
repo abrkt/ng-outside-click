@@ -13,7 +13,7 @@
       link: function ($scope, $element, $attrs) {
         var scopeExpression = $attrs.outsideClick;
         var onDocumentClick = function (event) {
-          if (!contains($element[0], event.target)) {
+          if ($element[0] !== event.target && !contains($element[0], event.target)) {
             $scope.$apply(scopeExpression);
           }
         };
